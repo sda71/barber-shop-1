@@ -15,8 +15,46 @@ body {
 .list {
   list-style: none;
 }
-button {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  wite-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* -----------------------GLOBAL-CLASSES---------------- */
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   cursor: pointer;
+}
+.pre-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+.after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 }
 /* -------------------HEADER------------------------- */
 .header {
@@ -51,12 +89,6 @@ button {
   color: #ffffff;
 }
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--main-btn-color);
 }
 
@@ -79,10 +111,6 @@ button {
   color: var(--accent-color);
 }
 .hero-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 .hero-title {
@@ -90,12 +118,9 @@ button {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
-  color: var(--main-title-color);
+  color: var(--second-title-color);
 }
 .hero-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: #9da4bd;
 }
 /* -------------------------ABOUT------------------ */
@@ -109,25 +134,12 @@ button {
 .about-pic {
 }
 .about-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: #303030;
 }
 .about-title {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.08;
-  letter-spacing: 0.05em;
-
-  color: var(--main-title-color);
+  color: var(--second-title-color);
 }
 .about-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: #555555;
 }
 .about-text {
@@ -137,13 +149,6 @@ button {
   color: #555555;
 }
 .about-btn {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--second-btn-color);
 }
 
@@ -152,17 +157,9 @@ button {
   background-color: #505567;
 }
 .prices-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 .prices-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--main-title-color);
 }
 .prices-list {
@@ -176,16 +173,10 @@ button {
   color: #9da4bd;
 }
 .prices-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--main-btn-color);
 }
 
-/* -------------------------ABOUT------------------ */
+/* -------------------------BENEFITS------------------ */
 .benefits {
 }
 .benefits-list {
@@ -200,22 +191,62 @@ button {
   color: #303030;
 }
 .benefits-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: #303030;
 }
 .benefits-title {
-  font-family: 'Raleway', sans-serif;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
   color: var(--second-title-color);
 }
 .benefits-after-title {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
   color: #555555;
+}
+.benefits-item > span {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+/* -------------------------BARBERS------------------ */
+
+.barbers {
+}
+.barbers-pre-title {
+  color: #303030;
+}
+
+.barbers-title {
+  color: var(--second-title-color);
+}
+
+.barbers-list {
+}
+
+.barbers-item {
+}
+.barbers-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.29;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+.barbers-item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+/* -------------------------BARBERS------------------ */
+.gallery {
+}
+.gallery-pre-title {
+  color: #303030;
+}
+.gallery-list {
+}
+.gallery-item {
 }
