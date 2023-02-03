@@ -5,6 +5,28 @@
   --second-btn-color: #303030;
   --accent-color: #ff6c00;
 }
+
+/* -----------------RESET STYLES---------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,7 +36,10 @@ body {
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -23,11 +48,23 @@ body {
   border: 0;
   padding: 0;
 
-  wite-space: nowrap;
+  white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* 
+.container {
+  width: 1170px;
+  width: 100%; узнать подробнее - адаптивная верстка? */
+/* max-width: 1158px; */
+/* padding-left: 15px; */
+/* padding-right: 15px; */
+/* margin-left: auto; */
+/* margin-right: auto; */
+/* align-items: center; */
+/* outline: 2px solid tomato; */
+/* }  */
 
 /* -----------------------GLOBAL-CLASSES---------------- */
 .title {
@@ -38,11 +75,16 @@ body {
 }
 .btn {
   font-family: inherit;
+  min-width: 160px;
+  height: 40px;
+  background-color: transparent;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
   cursor: pointer;
 }
 .pre-title {
@@ -60,11 +102,20 @@ body {
 .header {
   background-color: grey;
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-navigation {
+  display: flex;
+  align-items: center;
 }
 .header-logo {
+  margin-right: 130px;
 }
 .header-list {
+  display: flex;
+  gap: 30px;
 }
 .header-item {
 }
@@ -87,6 +138,8 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-left: auto;
+  margin-right: 43px;
 }
 .header-btn {
   color: var(--main-btn-color);
@@ -94,9 +147,17 @@ body {
 
 /* ------------------- HERO ---------------- */
 .hero {
+}
+.hero-container {
+  display: flex;
+}
+.hero-wrap {
   background-color: #505567;
+  flex-grow: 1;
+  padding: 272px 100px 208px;
 }
 .hero-list {
+  width: 155px;
 }
 .hero-item {
 }
@@ -121,13 +182,20 @@ body {
   color: var(--second-title-color);
 }
 .hero-after-title {
+  display: inline-block;
   color: #9da4bd;
+  max-width: 360px;
 }
 /* -------------------------ABOUT------------------ */
 
 .about {
 }
+.about-container {
+  display: flex;
+}
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 .about-item {
 }
@@ -151,10 +219,14 @@ body {
 .about-btn {
   color: var(--second-btn-color);
 }
+.about-wrap {
+}
 
 /* -------------------SERVISES-AND-PRICES--------------- */
 .prices {
   background-color: #505567;
+}
+.prices-container {
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -178,6 +250,8 @@ body {
 
 /* -------------------------BENEFITS------------------ */
 .benefits {
+}
+.benefits-container {
 }
 .benefits-list {
 }
